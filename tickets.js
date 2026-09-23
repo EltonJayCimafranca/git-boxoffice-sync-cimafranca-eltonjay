@@ -3,6 +3,9 @@ function isValidQuantity(quantity) {
 }
 
 function calculateTicketPrice(quantity, basePrice) {
+  if(quantity >= 5) {
+    return Math.floor(quantity * (basePrice * 0.90));
+  }
   return Math.floor(quantity * basePrice);
 }
 
